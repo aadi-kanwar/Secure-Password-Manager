@@ -1,0 +1,20 @@
+secure-password-manager/
+│── backend/             # Flask Backend
+│   ├── app.py
+│   ├── config.py
+│   ├── models.py
+│   ├── routes.py
+│   ├── encryption.py
+│   ├── db_init.py
+│   ├── requirements.txt
+frontend/               # React Frontend
+│── src/
+│   ├── components/         # Reusable UI components
+│   │   ├── Register.js
+│   │   ├── PasswordList.js
+│   ├── api.js              # API service to interact with Flask backend
+│   ├── App.js              # Main application file
+│   ├── index.js            # React entry point
+│── package.json            # Node dependencies
+│── .gitignore              # Ignore unnecessary files
+
