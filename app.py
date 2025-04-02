@@ -6,7 +6,7 @@ from Crypto.Random import get_random_bytes
 import base64
 import os
 
-CSV_FILE = "passwords.csv"
+CSV_FILE = "passwords_aes.csv"
 KEY_FILE = "aes_key.key"
 BLOCK_SIZE = 16  # AES block size (128-bit encryption)
 
@@ -105,7 +105,7 @@ def login():
     
     # Predefined credentials
     USERNAME = "admin"
-    PASSWORD = "password123"
+    PASSWORD = "pass"
     
     # Session state to track login
     if "logged_in" not in st.session_state:
