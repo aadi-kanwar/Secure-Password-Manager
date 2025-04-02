@@ -1,51 +1,71 @@
 # Secure Password Manager
 
-A Secure Password Manager built using Flask, React.js, PostgreSQL, and AES-256 encryption to ensure safe and efficient password storage.
+## 🔐 Overview
+Secure Password Manager is a simple and secure password storage application built using **Streamlit**. It encrypts stored passwords using **AES (Advanced Encryption Standard) encryption** or **Fernet Encryption** and allows users to manage their credentials securely.
 
-## Features
+## 🚀 Features
+- **User Authentication**: Basic login system with predefined credentials.
+- **Password Encryption**: Uses AES-128 encryption with a random IV (Initialization Vector) or FERNET Encryption.
+- **Store Passwords**: Save website credentials in an encrypted format.
+- **View Saved Passwords**: Display encrypted credentials.
+- **Decrypt Passwords**: Option to view decrypted passwords.
+- **Delete Password Entries**: Remove saved credentials securely.
+- **Persistent Storage**: Saves data in a CSV file.
 
-1. User Login & Session Management: Secure authentication and session handling.
+## 📦 Dependencies
+Ensure you have the following Python packages installed:
 
-2. AES-256 Encryption: Encrypts stored passwords for maximum security.
+```basj
+pip install streamlit pandas pycryptodome cryptography
+```
 
-3. Edit/Delete Stored Passwords: Users can modify or remove saved credentials.
+## 🛠 Installation
+1. Clone the repository or download the source code.
+2. Navigate to the project directory.
+3. Install the required dependencies using the command above.
 
-4. UI Enhancements: A responsive and user-friendly interface.
+## ▶️ Usage
+Run the application using Streamlit:
 
-## Tech Stack
+### AES Encryption
+```bash
+streamlit run app.py
+```
+### Fernet Encryption
+```bash
+streamlit run fer.py
+```
 
-> Frontend: React.js  
-> Backend: Flask  
-> Database: PostgreSQL  
-> Encryption: AES-256
+## 🔑 Encryption Details
 
+- Uses AES-128 encryption (CBC mode) for secure password storage.
 
-## Installation
-### Pre-requisites
-- Python (>=3.8)
-- Node.js (>=16)
-- PostgreSQL (>=14)
+- Uses Fernet encryption for an additional security option.
 
-### Backend Setup (Flask)
-`cd backend`  
-`python db_init.py`  # Run once to initialize DB  
-`python app.py`
+- Generates and stores an encryption key (aes_key.key or fernet_key.key) in the working directory.
 
-### Frontend Setup (React.js)
-`cd frontend`  
-`npm start`
+- Encrypts passwords with a random IV (for AES) to ensure security.
 
-## Usage
-- Register an account or log in.
-- Add, edit, or delete passwords securely.
-- All passwords are encrypted before being stored in the database.
+## 📁 File Structure
+```
+secure-password-manager/
+│── app.py              # AED Encryption
+│── fer.py               # FERNET Encryption
+│── passwords.csv       # Stores encrypted passwords (generated automatically)
+│── aes_key.key         # AES encryption key (generated automatically)
+│── fernet_key.key      # Fernet encryption key (generated automatically)
+│── README.md           # Documentation
+```
 
-## Security Measures
-- Uses AES-256 encryption for storing passwords.
-- Passwords are never stored in plaintext.
-- Secure authentication mechanisms to prevent unauthorized access.
+## 📝 License
+This project is open-source and free to use for personal projects. Modify and improve as needed!
 
-## Roadmap / Future Enhancements
-- Two-Factor Authentication (2FA)
-- Password Strength Analyzer
-- Password Autofill Extension
+## ✨ Contributing
+Feel free to contribute to the project by submitting pull requests or reporting issues.
+
+## 📧 Contact
+For any queries or suggestions, feel free to reach out!
+
+---
+Enjoy secure password management with this simple and powerful application! 🔒🚀
+
